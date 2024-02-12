@@ -29,7 +29,6 @@ VERSAO_SHELL="$BASH_VERSION"
 INFO_REDE="$(ifconfig $(route | grep '^default' | grep -o '[^ ]*$'))"
 ESPACO_EM_DISCO="$(df -h)"
 USUARIOS_CONECTADOS="$(who)"
-#DISTRO="$(cat /etc/*release* | grep DISTRIB_DESCRIPTION | cut -d'=' -f2 | sort | uniq)"
 
 # Informações sobre a distribuição
 if [ -f /etc/lsb-release ]; then
@@ -56,6 +55,5 @@ echo -e "${RED}Quantidade de Memória:${NC}\n$MEMORIA\n"
 echo -e "${RED}Espaço em Disco:${NC}\n$ESPACO_EM_DISCO\n"
 echo -e "${RED}Informações da CPU:${NC}\n$CPU_INFO\n"
 echo -e "${RED}Informações de Processos:${NC}\n$PROCESSOS\n"
-
 
 echo -e "${GREEN}========================================= FIM =========================================${NC}"
